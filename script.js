@@ -1,10 +1,3 @@
-function load() {
-  console.log("i am in");
-  // fetch(`https://api.github.com/users/${original_name}`)
-  fetch("https://api.github.com/users/Sourav702")
-    .then((result) => result.json())
-    .then((json) => console.log(json));
-}
 $(document).ready(function () {
   $(".btn").click(function () {
     let user = $("#find").val();
@@ -18,6 +11,27 @@ $(document).ready(function () {
       $(".card-repo").html("Total Repo : " + data.public_repos);
       let profile = "https://github.com/" + user;
       $("#go").attr("href", profile);
+      window.data = data;
     });
+  });
+  $("#add").click(function () {
+    // alert($(".card-title").text());
+    var _name = data.name;
+    var _login = data.login;
+    var _follow = data.followers;
+    var _repo = data.public_repos;
+    // alert(_name);
+    // alert(_name);
+    var _tr =
+      "<tr> <td>" +
+      _name +
+      "</td> <td>" +
+      _login +
+      "</td> <td>" +
+      _follow +
+      "</td> <td>" +
+      _repo +
+      "</td> </tr>";
+    $("tbody").append(_tr);
   });
 });

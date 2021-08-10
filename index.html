@@ -14,31 +14,56 @@
     />
 
     <title>Git User</title>
+    <style>
+      header{
+        background-image: url("./bg.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 95vh;
+      }
+    </style>
   </head>
   <body style="background-color: rgb(228, 202, 164);">
-    <div class="container">
-      <h1 class="text-center">Github Fetching App</h1>
-      <br />
-        <div class="form-group">
-          <input class="form-control" type="text" name="" id="find" />
-        </div>
-        <div>
-          <br />
-          <button class="btn btn-info">Find User</button>
-        </div>
-    </div>
-    <br /><br />
-    <div class="card" style="width: 18rem; margin:0px auto;">
-      <img id="image" class="center"/>
-      <div class="card-body">
-        <h4 class="card-title"></h4>
-        <p class="card-text"></p>
-        <p class="card-repo"></p>
-        <a href="#" target="_blank" class="btn btn-success" id="go">Go to profile</a>
+<header>
+  <div class="container">
+    <h1 class="text-center pt-4 text-warning">Github Fetching App</h1>
+    <br />
+      <div class="form-group">
+        <input class="form-control" type="text" name="" id="find" />
       </div>
+      <div>
+        <br />
+        <button class="btn btn-info">Find User</button>
+      </div>
+  </div>
+  <br /><br />
+  <div class="card" style="width: 18rem; margin:0px auto;">
+    <img id="image" class="center"/>
+    <div class="card-body">
+      <h4 class="card-title"></h4>
+      <p class="card-text"></p>
+      <p class="card-repo"></p>
+      <a href="#" target="_blank" class="btn btn-success" id="go">Go to profile</a>
+      <button class="btn btn-danger" id="add">Add Table</button>
     </div>
-  
-
+  </div>
+</header>
+<div class="container pt-4">
+  <table class="table table-dark table-striped table-hover">
+    <thead class="thead-dark">
+      <th>Name</th>
+      <th>Login</th>
+      <th>Followers</th>
+      <th>Number of Repo</th>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+<!-- <footer class="bg-black">
+  <h3 class="text-white text-center p-4">Copyright Sourav Naga 2021</h3>
+</footer> -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
